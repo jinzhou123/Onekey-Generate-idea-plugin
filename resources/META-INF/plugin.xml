@@ -1,0 +1,46 @@
+<idea-plugin version="2">
+  <id>com.beijibei.plugin</id>
+  <name>OneKey Generate</name>
+  <version>1.0</version>
+  <vendor email="183305380@qq.com" url="beijibei.home"></vendor>
+
+  <description><![CDATA[
+     One key to generate test script.<br>
+     It also provider a quick way to find your script or csv file.<br>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      2018.4.26 first commit.<br>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="141.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="haha" class="OneKeyAction" text="Onekey Generate" description="Onekey Generate"
+            icon="icons/csv.gif">
+      <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl 1"/>
+      <add-to-group group-id="StructureViewPopupMenu" anchor="first"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl 1"/>
+      <add-to-group group-id="MainToolBar" anchor="last"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl 1"/>
+    </action>
+    <action id="hehe" class="QuickSwitch" text="QuickSwitch" description="QuickSwitch" icon="icons/switch.png">
+      <add-to-group group-id="MainToolBar" anchor="last"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl 2"/>
+    </action>
+  </actions>
+</idea-plugin>
